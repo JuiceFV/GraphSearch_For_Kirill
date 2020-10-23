@@ -1,0 +1,3 @@
+﻿  main.cxx
+D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h(23,79): warning C4227: anachronism used: qualifiers on reference are ignored
+  Graph_Project.vcxproj -> D:\GitHub\GraphSearch_For_Kirill\build\bin\Debug\Graph_Project.exe
