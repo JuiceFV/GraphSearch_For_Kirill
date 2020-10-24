@@ -1,3 +1,3 @@
 ﻿  main.cxx
-D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h(23,79): warning C4227: anachronism used: qualifiers on reference are ignored
+D:\GitHub\GraphSearch_For_Kirill\application\main.cxx(6): warning C4866: compiler may not enforce left-to-right evaluation order for call to 'std::operator<<<char,std::char_traits<char>,std::allocator<char> >'
   Graph_Project.vcxproj -> D:\GitHub\GraphSearch_For_Kirill\build\bin\Debug\Graph_Project.exe

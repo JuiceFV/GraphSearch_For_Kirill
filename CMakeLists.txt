@@ -25,12 +25,14 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(${PROJECT_NAME}_SOURCES 
                 "application/sources/FileLoader.cxx"
                 "application/sources/Graph.cxx"
+                "application/sources/WordSimilarity.cxx"
             )
 set(${PROJECT_NAME}_INCLUDES 
                 "application/includes/FileLoader.h"
                 "application/includes/Graph.h"
                 "application/includes/Globals.h"
                 "application/includes/Common.hpp"
+                "application/includes/WordSimilarity.h"
             )
 set(${PROJECT_NAME}_MAIN "application/main.cxx")
 

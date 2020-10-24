@@ -1,8 +1,8 @@
-#include "FileLoader.h"
+#include "WordSimilarity.h"
 
 int main()
-{
-    Loader a("graphs/directedGraph1.grph");
-    std::cout << a;
+{ 
+	setlocale(LC_ALL, "rus");
+    std::cout << smlrt::findeSimilarWord({"Los Angeles", "New York", "Washington", "Texas"}, "Texds", 2, false);
 	return (0);
 }

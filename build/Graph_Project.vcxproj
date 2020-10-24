@@ -316,10 +316,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\main.cxx" />
     <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\FileLoader.cxx" />
     <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\Graph.cxx" />
+    <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\WordSimilarity.cxx" />
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h" />
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\Graph.h" />
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\Globals.h" />
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\Common.hpp" />
+    <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\WordSimilarity.h" />
     <None Include="D:\GitHub\GraphSearch_For_Kirill\graphs\directedGraph1.grph">
     </None>
     <None Include="D:\GitHub\GraphSearch_For_Kirill\graphs\undirectedGraph1.grph">
