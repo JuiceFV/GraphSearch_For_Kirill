@@ -1,18 +1,18 @@
 !begin
 #type
-<directed>
+{directed}
 #vertices
-<Los Angeles>
-<New York>
-<Washington>
-<Texas>
+{Los Angeles}
+{New York}
+{Washington}
+{Texas}
 #edges
-<Los Angeles-New York>
-<New York=Washington>
-<Los Angeles-Texas>
-<Texas=New York>
+{Los Angeles->New York}
+{New York<->Washington}
+{Los Angeasasles->Texas}
+{Texas<->New York}
 #start
-<Texas>
+{Texas}
 #goal
-<Los Angeles>
+{Los Angeles}
 !end

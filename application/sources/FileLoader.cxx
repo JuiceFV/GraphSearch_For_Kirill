@@ -84,15 +84,15 @@ std::unordered_map<std::string, std::vector<std::string>> Loader::loadGraphFile(
                         // The graph's code ends at the `!end` command
                         while (std::getline(graph_file, line) && line.find("!end") == std::string::npos)
                         {
-                            // The graph's rlated data contains within `<>` brackets
+                            // The graph's rlated data contains within `{}` brackets
                             // The waste is skipping
-                            while (line[0] != '<' && !graph_file.eof())
+                            while (line[0] != '{' && !graph_file.eof())
                             {
                                 // Each command begins with the `#` sign
                                 if (line[0] == '#') key = retrieveKey(line);
                                 std::getline(graph_file, line);
                             }
-                            graph_tokens[key].push_back(std::string(&line[1], &line[line.find('>')]));
+                            graph_tokens[key].push_back(std::string(&line[1], &line[line.find('}')]));
                         }
                     }
                     else

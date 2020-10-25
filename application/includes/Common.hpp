@@ -1,5 +1,5 @@
 #pragma once
-#include "Graph.h"
+
 #include <omp.h>
 
 #include <cmath>
@@ -36,14 +36,5 @@ namespace std
         }
     };
 
-    std::vector<std::string> strSplit(const std::string &s, char delim)
-    {
-        std::vector<std::string> result;
-        std::stringstream ss(s);
-        std::string item;
-
-        while (getline(ss, item, delim)) { result.push_back(item); }
-
-        return result;
-    }
+    std::vector<std::string> strSplit(std::string s, const std::vector<std::string> &delim);
 } // namespace std

@@ -26,6 +26,8 @@ set(${PROJECT_NAME}_SOURCES
                 "application/sources/FileLoader.cxx"
                 "application/sources/Graph.cxx"
                 "application/sources/WordSimilarity.cxx"
+                "application/sources/Common.cxx"
+                "application/sources/Solver.cxx"
             )
 set(${PROJECT_NAME}_INCLUDES 
                 "application/includes/FileLoader.h"
@@ -33,6 +35,7 @@ set(${PROJECT_NAME}_INCLUDES
                 "application/includes/Globals.h"
                 "application/includes/Common.hpp"
                 "application/includes/WordSimilarity.h"
+                "application/includes/Solver.h"
             )
 set(${PROJECT_NAME}_MAIN "application/main.cxx")
 

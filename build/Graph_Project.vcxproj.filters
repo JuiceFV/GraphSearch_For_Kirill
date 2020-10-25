@@ -11,6 +11,12 @@
     <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\WordSimilarity.cxx">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\Common.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\GitHub\GraphSearch_For_Kirill\application\sources\Solver.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h">
@@ -26,6 +32,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\WordSimilarity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GitHub\GraphSearch_For_Kirill\application\includes\Solver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

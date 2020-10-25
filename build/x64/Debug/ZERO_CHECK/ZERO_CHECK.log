@@ -1,1 +1,19 @@
-﻿
+﻿  Checking Build System
+  CMake is re-running because D:/GitHub/GraphSearch_For_Kirill/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'D:/GitHub/GraphSearch_For_Kirill/graphs/undirectedGraph1.grph'
+    is newer than 'D:/GitHub/GraphSearch_For_Kirill/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.18363.
+  -- We are on a Windows system
+  Graph_Project version: 0.1
+  -- Safeguard's checks
+  -- Set flags for the compiler
+  -- Seting flags for the MSVC Compiler
+  -- Flags for the MSVC Compiler were set
+  -- Configuring directory D:/GitHub/GraphSearch_For_Kirill/build/graphs
+  -- Configuring file README.md
+  -- Configuring file directedGraph1.grph
+  -- Configuring file undirectedGraph1.grph
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: D:/GitHub/GraphSearch_For_Kirill/build
