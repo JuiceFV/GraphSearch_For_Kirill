@@ -7,10 +7,10 @@
 {Washington}
 {Texas}
 #edges
-{Los Angeles->New York}
-{New York<->Washington}
-{Los Angeasasles->Texas}
 {Texas<->New York}
+{New York<->Washington}
+{Los Angeles<->New York}
+{Los Angeasasles<->Texas}
 #start
 {Texas}
 #goal

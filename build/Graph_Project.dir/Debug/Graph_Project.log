@@ -1,1 +1,7 @@
-﻿  Graph_Project.vcxproj -> D:\GitHub\GraphSearch_For_Kirill\build\bin\Debug\Graph_Project.exe
+﻿  main.cxx
+D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h(23,79): warning C4227: anachronism used: qualifiers on reference are ignored
+D:\GitHub\GraphSearch_For_Kirill\application\includes\Graph.h(71,15): warning C4820: 'Graph': '4' bytes padding added after data member 'Graph::type'
+D:\GitHub\GraphSearch_For_Kirill\application\includes\Common.hpp(19,10): warning C4514: 'Node::operator !=': unreferenced inline function has been removed
+D:\GitHub\GraphSearch_For_Kirill\application\includes\FileLoader.h(23,26): warning C4514: 'operator <<': unreferenced inline function has been removed
+D:\GitHub\GraphSearch_For_Kirill\application\includes\Graph.h(21,26): warning C4514: 'operator <<': unreferenced inline function has been removed
+  Graph_Project.vcxproj -> D:\GitHub\GraphSearch_For_Kirill\build\bin\Debug\Graph_Project.exe
