@@ -57,11 +57,12 @@ std::unordered_map<std::string, std::vector<std::string>> Loader::getFileSource(
 
 std::unordered_map<std::string, std::vector<std::string>> Loader::loadGraphFile(std::string path) const
 {
-    std::unordered_map<std::string, std::vector<std::string>> graph_tokens; // the table with tokens and its content
-    std::string line;                                                       // each line
-    std::string key;                                                        // a token
-    std::ifstream graph_file;                                               // stream file
-    // check if the file able to throw exceptions
+    std::unordered_map<std::string, std::vector<std::string>>
+        graph_tokens; // хэш таблица, где индекс - токен (#token), а значения - значения токена
+    std::string line;         //каждая линия
+    std::string key;          // токен
+    std::ifstream graph_file; // считываемый файл
+    // может ли файл кидать искл.
     graph_file.exceptions(std::ifstream::badbit);
     try
     {
@@ -71,24 +72,23 @@ std::unordered_map<std::string, std::vector<std::string>> Loader::loadGraphFile(
         {
             throw std::ifstream::failure("The path " + fs::absolute(path).string() + " is wrong!");
         }
-        // reading file along with processing its content
+        // читаем файл
         while (std::getline(graph_file, line))
         {
-            // The graph's code begins from the `!begin` command
             if (line[0] == '!')
             {
                 try
                 {
+                    // если поле ! идёт begin
                     if (line.find("!begin") != std::string::npos)
                     {
-                        // The graph's code ends at the `!end` command
+                        // пока не конец файла/кода
                         while (std::getline(graph_file, line) && line.find("!end") == std::string::npos)
                         {
-                            // The graph's rlated data contains within `{}` brackets
-                            // The waste is skipping
+                            // пока не нашли данные для графа считываем файл
                             while (line[0] != '{' && !graph_file.eof())
                             {
-                                // Each command begins with the `#` sign
+                                // если начинается с # - это токен
                                 if (line[0] == '#') key = retrieveKey(line);
                                 std::getline(graph_file, line);
                             }

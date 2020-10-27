@@ -2,7 +2,7 @@
 
 #include <exception>
 #include <filesystem>
-#include <unordered_map>
+#include <unordered_map> // хэш таблица
 #include <vector>
 
 #include <fstream>
@@ -12,6 +12,8 @@
 
 #include "Globals.h"
 
+
+// пр. имён для файловой системы
 namespace fs = std::filesystem;
 
 class Loader

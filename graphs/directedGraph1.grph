@@ -9,8 +9,8 @@
 #edges
 {Texas<->New York}
 {New York<->Washington}
-{Los Angeles<->New York}
-{Los Angeasasles<->Texas}
+{Los Angeles->New York}
+{Los Angeasasles->Texas}
 #start
 {Texas}
 #goal

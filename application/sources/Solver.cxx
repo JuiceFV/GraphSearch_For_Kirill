@@ -68,7 +68,6 @@ bool Solver::breadthFirstSearch()
 
 bool Solver::depthFirstSearch()
 {
-    std::list<Node> new_prep_nodes;
     for (auto &node : this->prepared_nodes)
     {
         if (std::find(this->explored_nodes.begin(), this->explored_nodes.end(), node) == this->explored_nodes.end())

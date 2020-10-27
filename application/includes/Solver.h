@@ -9,15 +9,15 @@ class Solver
   public:
     Solver();
     Solver(const Graph &graph);
-    bool breadthFirstSearch();
-    bool depthFirstSearch();
+    bool breadthFirstSearch(); // в ширину
+    bool depthFirstSearch();   // в глубину
     void setStart(const Node &n);
     void setGoal(const Node &n);
     void printPath() const;
     Node getStart() const;
     Node getGoal() const;
     unsigned long long getSteps() const;
-    ~Solver() {};
+    ~Solver(){};
 
   private:
     unsigned long long steps;
@@ -29,4 +29,3 @@ class Solver
     std::list<Node> explored_nodes;
     std::list<Node> prepared_nodes;
 };
-
