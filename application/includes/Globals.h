@@ -3,10 +3,11 @@
 #include <string>
 #include <vector>
 
-// I've used the `enum class` cause
-// the enumerator's names are local to the enum
-// and their values do not implicitly convert
-// to other types, whilst `enum` does (to int for example).
+// я использовал `enum class`, потому что имена enum-a €вл€ютс€ локальными дл€ enum,
+// и их значени€ не конвертируютс€ не€вно в другие типы,
+// в то врем€ как `enum` так делает(например, в int)
+
+// тип графа
 enum class GRAPH_TYPE
 {
     UNDIRECTED,
@@ -15,6 +16,7 @@ enum class GRAPH_TYPE
 
 namespace defaults
 {
+    // данные дл€ дефолтного графа
     constexpr GRAPH_TYPE graph_type = GRAPH_TYPE::UNDIRECTED;
 
     const std::vector<std::string> vertices({"0", "1", "2", "3", "4", "5"});

@@ -4,7 +4,7 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    Solver g1_dir(Graph("graphs/directedGraph1.grph"));
+    Solver g1_dir(Graph("graphs/undirectedGraph1.grph"));
     std::cout << "Choose an algo:\n";
     std::cout << "[1] dfs\n"
               << "[2] bfs\n";
