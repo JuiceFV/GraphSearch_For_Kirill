@@ -15,9 +15,10 @@ class Solver
     bool depthFirstSearch();             // поиск в глубину
     void setStart(const Node &n);        // установить начальный нод
     void setGoal(const Node &n);         // установить цель
-    void printPath() const;              // напечатать путь
+    void printPath() const;              // напечатать путь, пройденный во время поиска
     Node getStart() const;               // получить стартовый нод
     Node getGoal() const;                // получить цель
+    void printWay(bool backward = true) const;  // напечатать путь
     unsigned long long getSteps() const; // получить кол-во пройденных шагов
     ~Solver(){};
 
@@ -29,4 +30,6 @@ class Solver
     Node goal;                      // цель
     std::list<Node> explored_nodes; // пройденные ноды, которые не являются целью
     std::list<Node> prepared_nodes; // ноды которые будут проверены на следующем шаге
+    std::vector<Node> backward_path; // обратный путь
+    void retrieveBackwardPath(const std::list<Node> &children);
 };

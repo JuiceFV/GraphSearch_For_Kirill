@@ -8,7 +8,7 @@ Solver::Solver(const Graph &graph)
     this->start = exploring_graph.getStart();
     this->goal = exploring_graph.getGoal();
     // изначально, нод который нужно проверить - стартовый
-    this->prepared_nodes.push_back(this->start); 
+    this->prepared_nodes.push_back(this->start);
 }
 
 Solver::Solver()
@@ -35,6 +35,35 @@ void Solver::printPath() const
 
 unsigned long long Solver::getSteps() const { return this->steps; }
 
+void Solver::retrieveBackwardPath(const std::list<Node> &children)
+{
+    for (auto &node : children)
+    {
+        if (std::find(this->explored_nodes.begin(), this->explored_nodes.end(), node) != this->explored_nodes.end())
+        {
+            this->backward_path.push_back(node);
+            if (node == this->start) return;
+            retrieveBackwardPath(this->exploring_graph[node]);
+        }
+    }
+}
+
+void Solver::printWay(bool backward) const
+{
+    size_t begin = 0;
+    size_t end = this->backward_path.size() - 1;
+    if (!backward)
+    {
+        begin = this->backward_path.size() - 1;
+        end = 0;
+    }
+
+    std::cout << "The way is:" << std::endl;
+    for (int i = begin; backward ? i < end : i > end; backward ? i++ : i--)
+        std::cout << this->backward_path[i] << " --> ";
+    std::cout << (backward ? this->backward_path.back() : this->backward_path.front());
+}
+
 // поиск в ширину
 bool Solver::breadthFirstSearch()
 {
@@ -53,14 +82,19 @@ bool Solver::breadthFirstSearch()
             this->path.push_back(node);
             this->steps++;
             // проверяем это наша цель или нет
-            if (node == this->goal) return true;
+            if (node == this->goal)
+            {
+                this->backward_path.push_back(this->goal);
+                retrieveBackwardPath(this->exploring_graph[this->goal]);
+                return true;
+            }
             // если нет - бросаем нод в исследованные
             this->explored_nodes.push_back(node);
 
             // получаем детей данного нода
             auto list = this->exploring_graph[node];
             // для комплексных многосвзных графов
-            // получаем уникальные ноды (если 1 соединена с 0 и 4, в то время как 4 так же 
+            // получаем уникальные ноды (если 1 соединена с 0 и 4, в то время как 4 так же
             // соединена с 0, тогда 0 повторится два раза.)
             list.unique();
             // так же текщий нод может быть соединён с уже иследованными
@@ -71,7 +105,7 @@ bool Solver::breadthFirstSearch()
                            ? false
                            : true;
             });
-            // т.к. мы ищем в ширину, мы постояно добавляем детей каждого нода, n-ого уровня 
+            // т.к. мы ищем в ширину, мы постояно добавляем детей каждого нода, n-ого уровня
             new_prep_nodes.insert(new_prep_nodes.end(), list.begin(), list.end());
         }
     }
@@ -98,7 +132,12 @@ bool Solver::depthFirstSearch()
             this->path.push_back(node);
             this->steps++;
             // проверяем это наша цель или нет
-            if (node == this->goal) return true;
+            if (node == this->goal)
+            {
+                this->backward_path.push_back(this->goal);
+                retrieveBackwardPath(this->exploring_graph[this->goal]);
+                return true;
+            }
             // если нет - бросаем нод в исследованные
             this->explored_nodes.push_back(node);
 

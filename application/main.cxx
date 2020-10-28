@@ -24,10 +24,11 @@ int main()
 
     if (input == "1")
     {
-        // plug in to a function
         if (g1_dir.depthFirstSearch())
         {
             g1_dir.printPath();
+            std::cout << std::endl;
+            g1_dir.printWay();
             std::cout << std::endl << "Number of steps: " << g1_dir.getSteps() << std::endl;
         }
         else
